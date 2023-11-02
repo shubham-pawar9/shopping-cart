@@ -1,0 +1,147 @@
+[
+    {
+        "id": 1,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 39999,
+        "src": "one.png",
+        "name": "Henry 3 Seater Sofa"
+    },
+    {
+        "id": 2,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 49999,
+        "src": "two.png",
+        "name": "Osbert 3 Seater Curved Sofa"
+    },
+    {
+        "id": 3,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 43999,
+        "src": "three.png",
+        "name": "Lorenz 3 Seater Sofa"
+    },
+    {
+        "id": 4,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 38999,
+        "src": "four.png",
+        "name": "Berlin 3 Seater Sofa"
+    },
+    {
+        "id": 5,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 34999,
+        "src": "five.png",
+        "name": "Parker 3 Seater Sofa"
+    },
+    {
+        "id": 6,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 29999,
+        "src": "six.png",
+        "name": "Amaya 3 Seater Sofa"
+    },
+    {
+        "id": 7,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 33899,
+        "src": "seven.png",
+        "name": "Winster 3 Seater Printed Fabric Wooden Sofa"
+    },
+    {
+        "id": 8,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 36999,
+        "src": "eight.png",
+        "name": "Marriott 3 Seater Wooden Sofa"
+    },
+    {
+        "id": 9,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 33499,
+        "src": "nine.png",
+        "name": "Raiden 3 Seater Wooden Sofa"
+    },
+    {
+        "id": 10,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 36999,
+        "src": "ten.png",
+        "name": "Quartz 3 Seater Wooden Sofa "
+    },
+    {
+        "id": 11,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 44999,
+        "src": "eleven.png",
+        "name": "Georgia 3 Seater Wooden Sofa"
+    },
+    {
+        "id": 12,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 35899,
+        "src": "twelve.png",
+        "name": "Quartz 3 Seater Printed Fabric Wooden Sofa"
+    },
+    {
+        "id": 13,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 45999,
+        "src": "thirteen.png",
+        "name": "Feltro Sheesham Wood Sofa Bed With Storage"
+    },
+    {
+        "id": 14,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 44999,
+        "src": "fourteen.png",
+        "name": "Della Sofa Cum Bed With Armrests"
+    },
+    {
+        "id": 15,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 36999,
+        "src": "fifteen.png",
+        "name": "Bacon Divan Cum Bed with Mattress"
+    },
+    {
+        "id": 16,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 43999,
+        "src": "sixteen.png",
+        "name": "Sereta Sheesham Wood Sofa Cum Bed"
+    },
+    {
+        "id": 17,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 41999,
+        "src": "seventeen.png",
+        "name": "Della Sofa Cum Bed Without Armrests"
+    },
+    {
+        "id": 18,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 39999,
+        "src": "eighteen.png",
+        "name": "Riota Sheesham Wood Sofa Bed With Storage"
+    }
+]
+
