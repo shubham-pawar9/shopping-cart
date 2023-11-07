@@ -473,3 +473,27 @@ padding: 10px 20px;
   pointer-events: none;
   color: gray;
 }
+@media screen and (max-width: 700px) and (max-height: 900px) and (orientation: portrait) {
+  .logInDiv {
+    width: 80vw;
+  }
+  .searchDiv {
+    display: none;
+  }
+  .sectionDiv ul {
+    overflow-x: auto;
+  }
+  .categories .card {
+    width: 100%;
+  }
+  .filter-div {
+    width: 80vw;
+    right: calc(0vw - 80vw + 55px);
+  }
+  .cartDiv {
+    width: 80vw;
+  }
+  .brandLogo {
+    width: 30%;
+  }
+}
