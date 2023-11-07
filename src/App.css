@@ -11,6 +11,7 @@
   align-items: center;
   border-bottom: 1px solid #00000082;
   justify-content: space-between;
+  background-color: #936517e0;
 }
 button {
   cursor: pointer;
@@ -23,6 +24,9 @@ button {
     align-items: center;
     justify-content: center;
     margin-left: 10px;
+}
+.brandLogo img {
+  height: 100%;
 }
 .searchDiv {
   display: flex;
@@ -40,6 +44,34 @@ button {
   border: none;
   border-bottom: 1px solid black;
   padding-left: 10px;
+}
+.searchBar:focus-visible {
+  outline: none;
+}
+.search-list {
+  position: absolute;
+    top: 52px;
+    width: 24%;
+    height: max-content;
+    background-color: #fff;
+    z-index: 1;
+    padding: 5px;
+    box-shadow: 0px 4px 9px #8080809e;
+    border-radius: 0px 0px 3px 3px;
+    background-color: #d7900e8f;
+    backdrop-filter: blur(3px);
+    display: none;
+}
+.search-list.active {
+  display: block;
+}
+.search-list li {
+  list-style-type: none;
+  cursor: pointer;
+}
+.search-list li:hover {
+  color: #fff;
+  text-shadow: 2px 2px 2px gray;
 }
 .searchSubmit {
   height: 70%;
@@ -60,13 +92,29 @@ button {
   align-items: center;
 }
 .profileShow {
-  width: 30%;
-  height: 75%;
+  max-width: 100px;
+  min-width: 75px;
+  height: 40px;
   margin-right: 10px;
+  background: transparent;
+  border: none;
+  box-shadow: 0px 3px 2px 1px #5a2414;
+  border-radius: 3px;
+  color: #5a2414;
+  font-weight: bold;
 }
 .cartBtn {
-  width: 30%;
-  height: 75%;
+  position: relative;
+  width: 75px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+}
+.cartBtn img {
+  height: 100%;
 }
 .sectionDiv {
   display: flex;
@@ -89,8 +137,13 @@ button {
   justify-content: center;
   align-items: center;
   margin: 0 10px;
+  cursor: pointer;
 }
 .sectionDiv ul li:hover{
+  color: #d7900e;
+  font-weight: 600;
+}
+.sectionDiv ul li.active {
   color: #d7900e;
   font-weight: 600;
 }
@@ -111,6 +164,10 @@ button {
     flex-wrap: wrap;
     flex-direction: row;
 }
+.categories.scroll-off {
+  height: calc(100vh - 125px);
+    overflow: hidden;
+}
 .categories .card {
   display: flex;
     height: 300px;
@@ -123,8 +180,12 @@ button {
     position: relative;
     
 }
+.card .item-image-div .loader-image {
+  /* height: 50px; */
+  width: auto;
+}
 .categories .card .cart-image {
-  height: 80%;
+  height: 100%;
   width: -webkit-fill-available;
   margin: 2px;
   border-radius: 10px;
@@ -179,8 +240,10 @@ button {
   width: 50vw;
   padding: 5px;
   text-align: center;
-  background-color: #fff;
-  min-height: -webkit-fill-available;
+  overflow: auto;
+  background-color: #ffffff7a;
+  backdrop-filter: blur(10px);
+  height: calc(100% - 70px);
   border: 1px solid black;
 }
 .cartItems {
@@ -228,4 +291,179 @@ button {
 }
 .cart-bottom-div span:nth-child(1) {
   margin: 0 10px;
+}
+.cartNumber {
+  position: absolute;
+    left: 20px;
+    top: 2px;
+    font-size: 14px;
+    font-family: auto;
+    height: 18px;
+    width: 18px;
+    background-color: #5A2414;
+    border-radius: 50%;
+    color: #fff;
+}
+.cartItems .remove-cart-icon {
+  height: 25px;
+}
+.item-image-div {
+  height: 235px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.filter-div {
+  position: fixed;
+  right: calc(0vw - 40vw + 60px);
+    top: calc(50% + 35px);
+    transform: translateY(-50%);
+    width: 40vw;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    transition: 0.2s linear all;
+}
+.filter-div.active {
+  right: 0px;
+}
+.filter-Btn {
+  height: 64px;
+  border: none;
+  background-color: #cf8a24ba;
+  font-size: 16px;
+  width: 70px;
+  border-radius: 10px 0 0 10px;
+  font-family: serif;
+  /* position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); */
+}
+.filter-Btn:hover {
+ backdrop-filter: blur(2px);
+}
+.filter-sort {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffffb0;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+}
+.filter-name {
+  text-align: center;
+  color: #8c4b0f;
+  font-weight: 700;
+}
+.filter-list {
+  display: flex;
+    flex-direction: column;
+    margin: 15px 10px;
+    background-color: #c38b3d00;
+    padding: 15px 10px;
+    border-radius: 2px;
+    box-shadow: 0px 16px 16px #b7b4b4d6;
+}
+.price-range {
+  display: none;
+}
+.reset-storage-type {
+  align-self: end;
+  padding: 8px 20px;
+  background-color: #d7a458;
+  border: none;
+  border-radius: 2px;
+  color: #8c4b0f;
+  font-weight: 700;
+}
+.filter-sort label {
+  cursor: pointer;
+  width: max-content;
+  margin: 7px 0;
+  color: #8c4b0f;
+  font-weight: 700;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.filter-sort input {
+  margin-right: 10px;
+}
+.filter-head {
+  font-size: 15px;
+  color: #8c4b0f;
+  font-weight: 600;
+  padding: 5px 10px;
+  background-color: #d7a458;
+}
+.logInDiv {
+  width: 40vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: max-content;
+  display: block;
+  background-color: #df92073b;
+  backdrop-filter: blur(5px);
+}
+.logInDiv img {
+  width: 100%;
+}
+.logInDiv form {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.logInDiv .logIn-head {
+  text-align: center;
+  color: #ffc913;
+  text-shadow: 1px 2px 1px #e79b07;
+  margin: 14px 0;
+}
+.logInDiv form label {
+  margin: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+.logInDiv form .formInput {
+  height: 30px;
+    border: none;
+    border-bottom: 1px solid #f9bc2f;
+    width: 80%;
+    background: transparent;
+    font-size: 15px;
+    color: #e79c07;
+    font-weight: 600;
+}
+.logInDiv form input:focus-visible {
+  outline: none;
+}
+.form-submit-btn {
+padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f8af08;
+    box-shadow: 1px 3px 8px #2e343647;
+    width: 65%;
+    font-weight: 600;
+    cursor: pointer;
+}
+.close-form-Btn {
+  height: 35px;
+  width: 35px;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.disabled {
+  pointer-events: none;
+  color: gray;
 }
