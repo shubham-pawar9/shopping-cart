@@ -18,7 +18,7 @@ function App() {
     "sofas",
     "beds",
     "wardrobe",
-    "dining tables",
+    "dining table",
     "chairs",
     "tv unit",
     "shoe rack",

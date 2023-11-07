@@ -5,7 +5,7 @@ const Login = ({ handleFormSubmit, setFormShow }) => {
         <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="logo" />
         <button className="close-form-Btn" onClick={() => setFormShow(false)}>
           <img
-            src={process.env.PUBLIC_URL + "/images/close-form.png"}
+            src={process.env.PUBLIC_URL + "/images/close-Form.png"}
             alt="close"
           />
         </button>

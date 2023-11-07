@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 .header {
   display: flex;
@@ -40,10 +41,15 @@ button {
 }
 .searchBar {
   width: 50%;
-  height: 75%;
-  border: none;
-  border-bottom: 1px solid black;
-  padding-left: 10px;
+    height: 75%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    background: transparent;
+    color: #5a2414;
+}
+.searchBar::placeholder {
+color: #5a2414;
 }
 .searchBar:focus-visible {
   outline: none;
