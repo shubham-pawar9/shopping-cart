@@ -1,0 +1,385 @@
+[
+    {
+        "id": 1,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 39999,
+        "name": "Henry 3 Seater Sofa"
+    },
+    {
+        "id": 2,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 49999,
+        "name": "Osbert 3 Seater Curved Sofa"
+    },
+    {
+        "id": 3,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 43999,
+        "name": "Lorenz 3 Seater Sofa"
+    },
+    {
+        "id": 4,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 38999,
+        "name": "Berlin 3 Seater Sofa"
+    },
+    {
+        "id": 5,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 34999,
+        "name": "Parker 3 Seater Sofa"
+    },
+    {
+        "id": 6,
+        "category": "sofas",
+        "type": "Fabric Sofas",
+        "price": 29999,
+        "name": "Amaya 3 Seater Sofa"
+    },
+    {
+        "id": 7,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 33899,
+        "name": "Winster 3 Seater Printed Fabric Wooden Sofa"
+    },
+    {
+        "id": 8,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 36999,
+        "name": "Marriott 3 Seater Wooden Sofa"
+    },
+    {
+        "id": 9,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 33499,
+        "name": "Raiden 3 Seater Wooden Sofa"
+    },
+    {
+        "id": 10,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 36999,
+        "name": "Quartz 3 Seater Wooden Sofa "
+    },
+    {
+        "id": 11,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 44999,
+        "name": "Georgia 3 Seater Wooden Sofa"
+    },
+    {
+        "id": 12,
+        "category": "sofas",
+        "type": "Wooden Sofas",
+        "price": 35899,
+        "name": "Quartz 3 Seater Printed Fabric Wooden Sofa"
+    },
+    {
+        "id": 13,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 45999,
+        "name": "Feltro Sheesham Wood Sofa Bed With Storage"
+    },
+    {
+        "id": 14,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 44999,
+        "name": "Della Sofa Cum Bed With Armrests"
+    },
+    {
+        "id": 15,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 36999,
+        "name": "Bacon Divan Cum Bed with Mattress"
+    },
+    {
+        "id": 16,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 43999,
+        "name": "Sereta Sheesham Wood Sofa Cum Bed"
+    },
+    {
+        "id": 17,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 41999,
+        "name": "Della Sofa Cum Bed Without Armrests"
+    },
+    {
+        "id": 18,
+        "category": "sofas",
+        "type": "Sofa Cum Bed",
+        "price": 39999,
+        "name": "Riota Sheesham Wood Sofa Bed With Storage"
+    },
+    {
+        "id": 19,
+        "category": "beds",
+        "type": "King Size Beds",
+        "price": 47999,
+        "name": "Ferguson Sheesham Wood Bed With Storage Drawers"
+    },
+    {
+        "id": 20,
+        "category": "beds",
+        "type": "King Size Beds",
+        "price": 43999,
+        "name": "Walken Sheesham Wood Bed with Full Drawer Storage"
+    },
+    {
+        "id": 21,
+        "category": "beds",
+        "type": "King Size Beds",
+        "price": 43999,
+        "name": "Lorenz 3 Seater Sofa"
+    },
+    {
+        "id": 22,
+        "category": "beds",
+        "type": "King Size Beds",
+        "price": 45999,
+        "name": "Adolph Sheesham Wood Bed With Side Storage"
+    },
+    {
+        "id": 23,
+        "category": "beds",
+        "type": "King Size Beds",
+        "price": 49999,
+        "name": "Morse Sheesham Wood Bed with Drawer Storage"
+    },
+    {
+        "id": 24,
+        "category": "beds",
+        "type": "King Size Beds",
+        "price": 51999,
+        "name": "Bacon Sheesham Wood Hydraulic Bed With Storage"
+    },
+    {
+        "id": 25,
+        "category": "beds",
+        "type": "Single Beds",
+        "price": 31999,
+        "name": "Walken Single Bed With Storage"
+    },
+    {
+        "id": 26,
+        "category": "beds",
+        "type": "Single Beds",
+        "price": 19999,
+        "name": "Adolph Single Bed Without Storage"
+    },
+    {
+        "id": 27,
+        "category": "beds",
+        "type": "Single Beds",
+        "price": 16999,
+        "name": "Evaline Single Bed With Box Storage"
+    },
+    {
+        "id": 28,
+        "category": "beds",
+        "type": "Single Beds",
+        "price": 45999,
+        "name": "Adolph Sheesham Wood Bed With Side Storage"
+    },
+    {
+        "id": 29,
+        "category": "beds",
+        "type": "Single Beds",
+        "price": 14999,
+        "name": "Venus Single Bed"
+    },
+    {
+        "id": 30,
+        "category": "beds",
+        "type": "Single Beds",
+        "price": 29999,
+        "name": "Walken Single Bed With Storage"
+    },
+    {
+        "id": 31,
+        "category": "beds",
+        "type": "Hydraulic Storage Beds",
+        "price": 49999,
+        "name": "Bacon Sheesham Wood Hydraulic Bed With Storage"
+    },
+    {
+        "id": 32,
+        "category": "beds",
+        "type": "Hydraulic Storage Beds",
+        "price": 66999,
+        "name": "Drewno Sheesham Wood Upholstered Bed With Hydraulic Storage"
+    },
+    {
+        "id": 33,
+        "category": "beds",
+        "type": "Hydraulic Storage Beds",
+        "price": 56999,
+        "name": "Adolph Sheesham Wood Hydraulic Storage Bed"
+    },
+    {
+        "id": 34,
+        "category": "beds",
+        "type": "Hydraulic Storage Beds",
+        "price": 59999,
+        "name": "Ferguson Sheesham Wood Hydraulic Bed With Storage"
+    },
+    {
+        "id": 35,
+        "category": "beds",
+        "type": "Hydraulic Storage Beds",
+        "price": 48999,
+        "name": "Bacon Sheesham Wood Hydraulic Bed With Storage"
+    },
+    {
+        "id": 36,
+        "category": "beds",
+        "type": "Hydraulic Storage Beds",
+        "price": 51999,
+        "name": "Walken Hydraulic Bed "
+    },
+    {
+        "id": 37,
+        "category": "wardrobe",
+        "type": "Single Door Wardrobe",
+        "price": 27999,
+        "name": "Adolph 1 Door Multi-Utility Wardrobe "
+    },
+    {
+        "id": 38,
+        "category": "wardrobe",
+        "type": "Single Door Wardrobe",
+        "price": 26999,
+        "name": "Holden 1 Door Multi-Utility Wardrobe "
+    },
+    {
+        "id": 39,
+        "category": "wardrobe",
+        "type": "Single Door Wardrobe",
+        "price": 28999,
+        "name": "Lacey Medium Size Wardrobe"
+    },
+    {
+        "id": 40,
+        "category": "wardrobe",
+        "type": "Single Door Wardrobe",
+        "price": 24999,
+        "name": "Boho 1 Door Multi Utility Wardrobe "
+    },
+    {
+        "id": 41,
+        "category": "wardrobe",
+        "type": "Single Door Wardrobe",
+        "price": 25999,
+        "name": "Swirl 1 Door Multi-Utility Wardrobe"
+    },
+    {
+        "id": 42,
+        "category": "wardrobe",
+        "type": "Single Door Wardrobe",
+        "price": 27999,
+        "name": "Cambrey 1 Door With 3 Drawers Wardrobe"
+    },
+
+    {
+        "id": 43,
+        "category": "wardrobe",
+        "type": "3 Door Wardrobe",
+        "price": 33999,
+        "name": "Kriva Modular 4 Door Wardrobe With Shelf"
+    },
+    {
+        "id": 44,
+        "category": "wardrobe",
+        "type": "3 Door Wardrobe",
+        "price": 56999,
+        "name": "Cambrey 3 Door Multi Utility Wardrobe"
+    },
+    {
+        "id": 45,
+        "category": "wardrobe",
+        "type": "3 Door Wardrobe",
+        "price": 16999,
+        "name": "Scarlet Engineered Wood 3 Door Cupboard"
+    },
+    {
+        "id": 46,
+        "category": "wardrobe",
+        "type": "3 Door Wardrobe",
+        "price": 57999,
+        "name": "Cambrey 3 Door Multi Utility Wardrobe"
+    },
+    {
+        "id": 47,
+        "category": "wardrobe",
+        "type": "3 Door Wardrobe",
+        "price": 52999,
+        "name": "Montana 3 Door Multi Utility Wardrobe "
+    },
+    {
+        "id": 48,
+        "category": "wardrobe",
+        "type": "3 Door Wardrobe",
+        "price": 24999,
+        "name": "Kosmo Apex 3 Door Dresser Wardrobe"
+    },
+
+    {
+        "id": 49,
+        "category": "wardrobe",
+        "type": "Mirrored Wardrobe",
+        "price": 37999,
+        "name": "Cambrey 2 Door Wardrobe with Mirror "
+    },
+    {
+        "id": 50,
+        "category": "wardrobe",
+        "type": "Mirrored Wardrobe",
+        "price": 30999,
+        "name": "Celestin Four Door Wardrobe with Dressing Table"
+    },
+    {
+        "id": 51,
+        "category": "wardrobe",
+        "type": "Mirrored Wardrobe",
+        "price": 26999,
+        "name": "Celestin Four Door Wardrobe with Dressing Table"
+    },
+    {
+        "id": 52,
+        "category": "wardrobe",
+        "type": "Mirrored Wardrobe",
+        "price": 17999,
+        "name": "Denver 2 Door Wardrobe with Mirror "
+    },
+    {
+        "id": 53,
+        "category": "wardrobe",
+        "type": "Mirrored Wardrobe",
+        "price": 31999,
+        "name": "Celestin Four Door Wardrobe with Dressing Table"
+    },
+    {
+        "id": 54,
+        "category": "wardrobe",
+        "type": "Mirrored Wardrobe",
+        "price": 34999,
+        "name": "Valor 4 Door Wardrobe with Mirror and Frosty White Drawer "
+    }
+
+
+]
+
