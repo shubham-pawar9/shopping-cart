@@ -7,28 +7,11 @@ const Header = ({
   suggestionList,
   handleSelectCategory,
   formData,
+  handleShowProfile,
 }) => {
-  const [selectedItemIndex, setSelectedItemIndex] = useState(-1);
-
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "ArrowDown") {
-        setSelectedItemIndex(
-          (prevIndex) => (prevIndex + 1) % suggestionList.length
-        );
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [suggestionList.length]);
-
   useEffect(() => {
     const handleDocumentClick = (event) => {
-      const searchDiv = document.querySelector(".searchDiv");
+      const searchDiv = document.querySelector(".searchBar");
       if (!searchDiv.contains(event.target)) {
         document.querySelector(".search-list").classList.remove("active");
       }
@@ -40,7 +23,6 @@ const Header = ({
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
-
   return (
     <>
       <div className="header">
@@ -72,8 +54,10 @@ const Header = ({
           </div>
         </div>
         <div className="rightDiv">
-          <button className="profileShow">
-            {formData.name == "" ? "Profile" : formData.name}
+          <button className="profileShow" onClick={handleShowProfile}>
+            {formData == undefined || formData == ""
+              ? "Profile"
+              : formData.name}
           </button>
           <button className="cartBtn" onClick={handleShowCart}>
             <span className="cartNumber">{cartData.length}</span>

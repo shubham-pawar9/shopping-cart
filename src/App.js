@@ -7,6 +7,8 @@ import Categories from "./component/Categories";
 import { useEffect, useState } from "react";
 import Cart from "./component/Cart";
 import Login from "./component/Login";
+import Profile from "./component/Profile";
+import MainLoader from "./component/MainLoader";
 
 function App() {
   const [cartStatus, setCartStatus] = useState(false);
@@ -25,11 +27,9 @@ function App() {
   ]);
   const [suggestionList, setSuggestionList] = useState([]);
   const [formShow, setFormShow] = useState(true);
-  const [formData, setFormData] = useState({
-    name: "",
-    mobile: "",
-    address: "",
-  });
+  const [profileShow, setProfileShow] = useState(false);
+  const [formData, setFormData] = useState();
+  const [mainLoad, setMainLoad] = useState(false);
   const handleAddToCart = (item, e) => {
     e.target.parentElement.classList.add("active");
     setCartData([...cartData, item]);
@@ -71,28 +71,69 @@ function App() {
     document.querySelector(".search-list").classList.add("active");
   };
   const handleFormSubmit = (e) => {
+    setMainLoad(true);
     e.preventDefault();
     const updatedFormData = {};
     e.target.childNodes.forEach((item) => {
       item.childNodes.forEach((val) => {
-        updatedFormData[val.name] = val.value;
+        if (val.childNodes[0] != undefined) {
+          console.log(val.childNodes[0].checked);
+          if (val.childNodes[0].checked == true) {
+            updatedFormData["gender"] = val.childNodes[0].value;
+          } else {
+            return;
+          }
+        } else {
+          updatedFormData[val.name] = val.value;
+        }
+        // console.log(val.childNodes[0]);
       });
     });
-    setFormData(updatedFormData);
-
+    try {
+      const serializedFormData = JSON.stringify(updatedFormData);
+      localStorage.setItem("formData", serializedFormData);
+    } catch (error) {
+      // Handle the error appropriately
+      console.error("Error while storing data: ", error);
+    }
     setFormShow(false);
+    handleMainLoad();
   };
 
+  const handleShowProfile = () => {
+    setProfileShow(true);
+  };
+  const handleMainLoad = () => {
+    setTimeout(() => {
+      setMainLoad(false);
+    }, 4000);
+  };
   useEffect(() => {
     const total = cartData.reduce((acc, item) => acc + item.price, 0);
     setCartTotal(total);
-    console.log(formData);
-  }, [cartData]);
+    const storedData = localStorage.getItem("formData");
+    if (storedData) {
+      try {
+        const parsedData = JSON.parse(storedData);
+        setFormData(parsedData);
+        console.log(parsedData);
+        parsedData["name"] != "" ? setFormShow(false) : setFormShow(true);
+      } catch (error) {
+        console.error("Error while retrieving data: ", error);
+      }
+    }
+  }, [cartData, formShow]);
 
   return (
     <>
       {formShow && (
-        <Login handleFormSubmit={handleFormSubmit} setFormShow={setFormShow} />
+        <Login
+          handleFormSubmit={handleFormSubmit}
+          setFormShow={setFormShow}
+          setMainLoad={setMainLoad}
+          mainLoad={mainLoad}
+          formShow={formShow}
+        />
       )}
       {!formShow && (
         <>
@@ -103,6 +144,7 @@ function App() {
             suggestionList={suggestionList}
             handleSelectCategory={handleSelectCategory}
             formData={formData}
+            handleShowProfile={handleShowProfile}
           />
           <Section
             setSelectCategory={setSelectCategory}
@@ -124,6 +166,15 @@ function App() {
           handleRemoveCartItem={handleRemoveCartItem}
         />
       )}
+      {profileShow && (
+        <Profile
+          formData={formData}
+          setFormData={setFormData}
+          setProfileShow={setProfileShow}
+          setFormShow={setFormShow}
+        />
+      )}
+      {mainLoad && <MainLoader />}
     </>
   );
 }

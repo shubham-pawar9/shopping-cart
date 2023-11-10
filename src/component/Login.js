@@ -1,9 +1,24 @@
-const Login = ({ handleFormSubmit, setFormShow }) => {
+const Login = ({
+  handleFormSubmit,
+  setFormShow,
+  setMainLoad,
+  mainLoad,
+  formShow,
+}) => {
+  const handleCloseForm = () => {
+    setMainLoad(true);
+    setFormShow(false);
+    setTimeout(() => {
+      setMainLoad(false);
+      setFormShow(false);
+      console.log(mainLoad, formShow);
+    }, 4000);
+  };
   return (
     <>
       <div className="logInDiv">
         <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="logo" />
-        <button className="close-form-Btn" onClick={() => setFormShow(false)}>
+        <button className="close-form-Btn" onClick={handleCloseForm}>
           <img
             src={process.env.PUBLIC_URL + "/images/close-form.png"}
             alt="close"
@@ -15,12 +30,40 @@ const Login = ({ handleFormSubmit, setFormShow }) => {
             handleFormSubmit(e);
           }}
         >
+          <div className="gender-checkbox">
+            <label>
+              <input
+                className="formInput-checkbox"
+                type="radio"
+                name="gender"
+                value="mr"
+              />
+              Mr
+            </label>
+            <label>
+              <input
+                className="formInput-checkbox"
+                type="radio"
+                name="gender"
+                value="mrs"
+              />
+              Mrs
+            </label>
+          </div>
           <label>
             <input
               className="formInput"
               type="text"
               placeholder="Name"
               name="name"
+            />
+          </label>
+          <label>
+            <input
+              className="formInput"
+              type="email"
+              placeholder="Email"
+              name="email"
             />
           </label>
           <label>
