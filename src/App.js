@@ -9,12 +9,13 @@ import Cart from "./component/Cart";
 import Login from "./component/Login";
 import Profile from "./component/Profile";
 import MainLoader from "./component/MainLoader";
+import Note from "./component/Note";
 
 function App() {
   const [cartStatus, setCartStatus] = useState(false);
   const [cartData, setCartData] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
-  const [selectCategory, setSelectCategory] = useState("sofas");
+  const [selectCategory, setSelectCategory] = useState();
   const [loader, setLoader] = useState(false);
   const [sectionList, setSectionList] = useState([
     "sofas",
@@ -30,40 +31,60 @@ function App() {
   const [profileShow, setProfileShow] = useState(false);
   const [formData, setFormData] = useState();
   const [mainLoad, setMainLoad] = useState(false);
+  const [noteShow, setNoteShow] = useState(false);
+  const contentList = ["header", "sectionDiv", "categories "];
   const handleAddToCart = (item, e) => {
     e.target.parentElement.classList.add("active");
     setCartData([...cartData, item]);
   };
-
+  const handleContentNone = () => {
+    contentList.forEach((item) => {
+      console.log(item);
+      document.querySelector(`.${item}`).classList.add("content-none");
+    });
+  };
+  const handleContentAll = () => {
+    contentList.forEach((item) => {
+      console.log(item);
+      document.querySelector(`.${item}`).classList.remove("content-none");
+    });
+  };
   const handleShowCart = () => {
     setCartStatus(true);
     document.querySelector(".categories").classList.add("scroll-off");
   };
 
   const handleRemoveCartItem = (cartItem) => {
-    setCartData(cartData.filter((item) => item.name !== cartItem.name));
-    document
-      .querySelector(`#data${cartItem["id"]}`)
-      ?.classList.remove("active");
+    setCartData((prevCartData) => {
+      const indexToRemove = prevCartData.findIndex(
+        (item) => item.id === cartItem.id
+      );
+      if (indexToRemove !== -1) {
+        const newCartData = [...prevCartData];
+        newCartData.splice(indexToRemove, 1);
+        return newCartData;
+      }
+      return prevCartData;
+    });
+    document.querySelector(`#data${cartItem.id}`)?.classList.remove("active");
   };
-  const handleSelectCategory = (e) => {
-    setSelectCategory(e.target.id);
+  const handleSelectCategory = (id) => {
+    console.log(id);
+    setSelectCategory(id);
     setLoader(true);
     setTimeout(() => {
       cartData.forEach((item) => {
         document.querySelector(`#data${item.id}`)?.classList.add("active");
       });
       setLoader(false);
-    }, 500);
+    }, 300);
 
     if (document.querySelector(".sectionDiv ul li.active")) {
       document
         .querySelector(".sectionDiv ul li.active")
         .classList.remove("active");
     }
-    document
-      .querySelector(`.sectionDiv ul li#${e.target.id}`)
-      .classList.add("active");
+    document.querySelector(`.sectionDiv ul li#${id}`)?.classList.add("active");
   };
 
   const handleSearchBar = (value) => {
@@ -72,6 +93,7 @@ function App() {
   };
   const handleFormSubmit = (e) => {
     setMainLoad(true);
+
     e.preventDefault();
     const updatedFormData = {};
     e.target.childNodes.forEach((item) => {
@@ -106,11 +128,26 @@ function App() {
   const handleMainLoad = () => {
     setTimeout(() => {
       setMainLoad(false);
-    }, 4000);
+      handleSelectCategory("sofas");
+      setNoteShow(true);
+      document.querySelector(".categories").classList.add("scroll-off");
+      handleContentNone();
+    }, 1000);
   };
   useEffect(() => {
+    handleSelectCategory("sofas");
+  }, []);
+  useEffect(() => {
     const total = cartData.reduce((acc, item) => acc + item.price, 0);
-    setCartTotal(total);
+    const discountedTotal = parseInt(total - total * 0.15);
+    console.log(cartData.length);
+    if (cartData.length >= 3) {
+      setCartTotal(
+        `<span style="font-weight: bold">${discountedTotal}</span><span style="text-decoration: line-through;">${total}</span>`
+      );
+    } else {
+      setCartTotal(`<span style="font-weight: bold">${total}</span>`);
+    }
     const storedData = localStorage.getItem("formData");
     if (storedData) {
       try {
@@ -133,6 +170,9 @@ function App() {
           setMainLoad={setMainLoad}
           mainLoad={mainLoad}
           formShow={formShow}
+          handleSelectCategory={handleSelectCategory}
+          setNoteShow={setNoteShow}
+          handleContentNone={handleContentNone}
         />
       )}
       {!formShow && (
@@ -175,6 +215,9 @@ function App() {
         />
       )}
       {mainLoad && <MainLoader />}
+      {noteShow && (
+        <Note setNoteShow={setNoteShow} handleContentAll={handleContentAll} />
+      )}
     </>
   );
 }

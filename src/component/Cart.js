@@ -13,7 +13,10 @@ const Cart = ({ cartData, setCartStatus, cartTotal, handleRemoveCartItem }) => {
               .classList.remove("scroll-off");
           }}
         >
-          Close
+          <img
+            src={process.env.PUBLIC_URL + "/images/close-form.png"}
+            alt="closeCart"
+          />
         </button>
         <span>Cart Items</span>
 
@@ -43,14 +46,27 @@ const Cart = ({ cartData, setCartStatus, cartTotal, handleRemoveCartItem }) => {
             );
           })
         )}
-        {cartTotal.length == 0 ? (
+        {cartTotal.length === 0 ? (
           ""
         ) : (
           <div className="cart-bottom-div">
             <span>Total</span>
-            <span>{cartTotal}</span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: cartTotal,
+              }}
+            />
           </div>
         )}
+        <div className="discNote">
+          {cartData.length >= 3 ? (
+            <span>Congrats You get 15% Discount on your Cart Total</span>
+          ) : (
+            <span>
+              Select any 3 items or more and get 15% Discount on total{" "}
+            </span>
+          )}
+        </div>
       </div>
     </>
   );

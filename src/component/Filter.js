@@ -11,6 +11,13 @@ const Filter = ({
   const handleFilterShow = () => {
     filterRef.current.classList.toggle("active");
   };
+  const handleResetFilter = () => {
+    let element = document.querySelectorAll(".filter-sort input[type=radio]");
+    for (var i = 0; i < element.length; i++) {
+      element[i].checked = false;
+      element[0].checked = true;
+    }
+  };
   return (
     <>
       <div className="filter-div" ref={filterRef}>
@@ -86,6 +93,7 @@ const Filter = ({
                       onChange={() => {
                         setFilterType(val);
                         filterRef.current.classList.remove("active");
+                        console.log(val);
                       }}
                     />{" "}
                     {val}
@@ -96,6 +104,8 @@ const Filter = ({
               className="reset-storage-type"
               onClick={() => {
                 setFilterType("");
+                handleResetFilter();
+                handleSortBy("recommanded");
                 filterRef.current.classList.remove("active");
               }}
             >

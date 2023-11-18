@@ -4,15 +4,21 @@ const Login = ({
   setMainLoad,
   mainLoad,
   formShow,
+  handleSelectCategory,
+  setNoteShow,
+  handleContentNone,
 }) => {
   const handleCloseForm = () => {
     setMainLoad(true);
     setFormShow(false);
+    handleSelectCategory("sofas");
     setTimeout(() => {
       setMainLoad(false);
       setFormShow(false);
-      console.log(mainLoad, formShow);
-    }, 4000);
+      setNoteShow(true);
+      document.querySelector(".categories").classList.add("scroll-off");
+      handleContentNone();
+    }, 1000);
   };
   return (
     <>
