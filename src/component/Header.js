@@ -43,7 +43,7 @@ const Header = ({
                   <li
                     id={item.replace(/\s+/g, "")}
                     onClick={(e) => {
-                      handleSelectCategory(e);
+                      handleSelectCategory(e.target.id);
                     }}
                   >
                     {item}
