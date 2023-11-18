@@ -378,8 +378,125 @@
         "type": "Mirrored Wardrobe",
         "price": 34999,
         "name": "Valor 4 Door Wardrobe with Mirror and Frosty White Drawer "
+    },
+    {
+        "id": 55,
+        "category": "diningtable",
+        "type": "Marble Dining Table",
+        "price": 99999,
+        "name": "Valence Marble Top 6 Seater Dining Set (Ginger Bread)"
+    },
+    {
+        "id": 56,
+        "category": "diningtable",
+        "type": "Marble Dining Table",
+        "price": 159999,
+        "name": "Antara Teak Wood Italian Marble Top 6 Seater Dining Table"
+    },
+    {
+        "id": 57,
+        "category": "diningtable",
+        "type": "Marble Dining Table",
+        "price": 91999,
+        "name": "Allendale Marble 4 Seater Dining Set with Bench"
+    },
+    {
+        "id": 58,
+        "category": "diningtable",
+        "type": "Marble Dining Table",
+        "price": 65999,
+        "name": "Fressia Green Marble Top 6 Seater Dining Set"
+        
+    },
+    {
+        "id": 59,
+        "category": "diningtable",
+        "type": "Marble Dining Table",
+        "price": 125999,
+        "name": "Saumik Marble Top Teak Wood 6 Seater Dining Table"
+    },
+    {
+        "id": 60,
+        "category": "diningtable",
+        "type": "Marble Dining Table",
+        "price": 100999,
+        "name": "Valence Marble Top 6 Seater Dining Set (Gray)"
+    },
+    {
+        "id": 61,
+        "category": "diningtable",
+        "type": "8 Seater Dining Sets",
+        "price": 55999,
+        "name": "Mcbeth Storage 8 Seater Dining Set (Honey Finish)"
+    },
+    {
+        "id": 62,
+        "category": "diningtable",
+        "type": "8 Seater Dining Sets",
+        "price": 58999,
+        "name": "Cambrey 8 Seater Dining Set"
+    },
+    {
+        "id": 63,
+        "category": "diningtable",
+        "type": "8 Seater Dining Sets",
+        "price": 57999,
+        "name": "Mcbeth Storage 8 Seater Dining Set (Walnut Finish)"
+    },
+    {
+        "id": 64,
+        "category": "diningtable",
+        "type": "8 Seater Dining Sets",
+        "price": 53999,
+        "name": "Janet 8 Seater Dining Set"
+    },
+    {
+        "id": 65,
+        "category": "diningtable",
+        "type": "2 Seater Dining Sets",
+        "price": 18999,
+        "name": "Cora Metal 2 Seater Dining Set"
     }
-
+    ,
+    {
+        "id": 66,
+        "category": "diningtable",
+        "type": "2 Seater Dining Sets",
+        "price": 31999,
+        "name": "Bonita 2 Seater Printed Dining Set"
+    }
+    ,
+    {
+        "id": 67,
+        "category": "diningtable",
+        "type": "2 Seater Dining Sets",
+        "price": 19499,
+        "name": "Benz Wall Mount 2 Seater Foldable Dining Set"
+    }
+    ,
+    {
+        "id": 68,
+        "category": "diningtable",
+        "type": "2 Seater Dining Sets",
+        "price": 22999,
+        "name": "Clove 2 Seater Dining Set"
+    }
+    ,
+    {
+        "id": 69,
+        "category": "diningtable",
+        "type": "2 Seater Dining Sets",
+        "price": 18500,
+        "name": "Athens Square Shape Table with Chair"
+    }
+    ,
+    {
+        "id": 70,
+        "category": "diningtable",
+        "type": "2 Seater Dining Sets",
+        "price": 20099,
+        "name": "Terex 2 Seater Dining Set"
+    }
 
 ]
 
