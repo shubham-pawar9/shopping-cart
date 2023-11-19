@@ -106,7 +106,7 @@ const Categories = ({ handleAddToCart, selectCategory, loader }) => {
                         className="cart-image"
                         src={
                           process.env.PUBLIC_URL +
-                          `/images/adds/${item.category}/${item.id}.png`
+                          `/images/adds/${item.category}/${item.id}.jpg`
                         }
                         alt="item image"
                       />
