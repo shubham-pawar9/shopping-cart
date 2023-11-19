@@ -22,25 +22,13 @@ const Section = ({ setSelectCategory, handleSelectCategory }) => {
           >
             Dining Tables
           </li>
-          <li
-            id="chairs"
-            className="disabled"
-            onClick={(e) => handleSelectCategory(e.target.id)}
-          >
+          <li id="chairs" onClick={(e) => handleSelectCategory(e.target.id)}>
             Chairs
           </li>
-          <li
-            id="tvunit"
-            className="disabled"
-            onClick={(e) => handleSelectCategory(e.target.id)}
-          >
+          <li id="tvunit" onClick={(e) => handleSelectCategory(e.target.id)}>
             TV Unit
           </li>
-          <li
-            id="shoerack"
-            className="disabled"
-            onClick={(e) => handleSelectCategory(e.target.id)}
-          >
+          <li id="shoerack" onClick={(e) => handleSelectCategory(e.target.id)}>
             Shoe Rack
           </li>
         </ul>
