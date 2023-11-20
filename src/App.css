@@ -255,7 +255,7 @@ color: #5a2414;
   background-color: #ffffff7a;
   backdrop-filter: blur(10px);
   height: calc(100% - 70px);
-  border: 1px solid black;
+  border: 5px solid #a078333d;
 }
 .cartItems {
   display: flex;
