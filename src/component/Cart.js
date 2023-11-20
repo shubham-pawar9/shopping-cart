@@ -30,7 +30,7 @@ const Cart = ({ cartData, setCartStatus, cartTotal, handleRemoveCartItem }) => {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    `/images/adds/${cartItem.category}/${cartItem.id}.png`
+                    `/images/adds/${cartItem.category}/${cartItem.id}.jpg`
                   }
                   alt="item image"
                 />

@@ -1,15 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Header from "./component/Header";
-import Section from "./component/Section";
+// import Header from "./component/Header";
+// import Section from "./component/Section";
 import Cover from "./component/Cover";
-import Categories from "./component/Categories";
-import { useEffect, useState } from "react";
+// import Categories from "./component/Categories";
+import { Suspense, useEffect, useState } from "react";
 import Cart from "./component/Cart";
 import Login from "./component/Login";
 import Profile from "./component/Profile";
 import MainLoader from "./component/MainLoader";
 import Note from "./component/Note";
+import { lazy } from "react";
+const Header = lazy(() => import("./component/Header"));
+const Section = lazy(() => import("./component/Section"));
+const Categories = lazy(() => import("./component/Categories"));
 
 function App() {
   const [cartStatus, setCartStatus] = useState(false);
@@ -176,7 +180,7 @@ function App() {
         />
       )}
       {!formShow && (
-        <>
+        <Suspense fallback={<MainLoader />}>
           <Header
             handleShowCart={handleShowCart}
             cartData={cartData}
@@ -196,8 +200,9 @@ function App() {
             loader={loader}
             setSelectCategory={setSelectCategory}
           />
-        </>
+        </Suspense>
       )}
+
       {cartStatus && cartData && (
         <Cart
           cartData={cartData}
@@ -214,7 +219,7 @@ function App() {
           setFormShow={setFormShow}
         />
       )}
-      {mainLoad && <MainLoader />}
+      {/* {mainLoad && <MainLoader />} */}
       {noteShow && (
         <Note setNoteShow={setNoteShow} handleContentAll={handleContentAll} />
       )}
